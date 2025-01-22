@@ -6,7 +6,7 @@
 /*   By: bfaras <bfaras@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 17:11:09 by bfaras            #+#    #+#             */
-/*   Updated: 2025/01/21 11:56:10 by bfaras           ###   ########.fr       */
+/*   Updated: 2025/01/22 15:42:17 by bfaras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <string.h>
 # include <unistd.h>
 # include <limits.h>
+# include <stdint.h>
 
 void	ft_bzero(void *s, size_t n);
 void	ft_putchar_fd(char c, int fd);
