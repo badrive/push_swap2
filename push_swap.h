@@ -6,7 +6,7 @@
 /*   By: bfaras <bfaras@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 20:58:33 by bfaras            #+#    #+#             */
-/*   Updated: 2025/01/22 14:48:27 by bfaras           ###   ########.fr       */
+/*   Updated: 2025/01/22 20:29:20 by bfaras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 
 typedef struct {
     int arr[MAX_SIZE];  
-    int top;        
+    int top;
 } stack;
 
 #endif

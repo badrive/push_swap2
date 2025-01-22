@@ -6,7 +6,7 @@
 /*   By: bfaras <bfaras@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 17:11:09 by bfaras            #+#    #+#             */
-/*   Updated: 2025/01/22 15:42:17 by bfaras           ###   ########.fr       */
+/*   Updated: 2025/01/22 21:04:20 by bfaras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <unistd.h>
 # include <limits.h>
 # include <stdint.h>
+
 
 void	ft_bzero(void *s, size_t n);
 void	ft_putchar_fd(char c, int fd);
@@ -31,7 +32,7 @@ void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_calloc(size_t count, size_t size);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_isalpha(int c);
-int		ft_isdigit(int c);
+int		ft_isdigit(char *str);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
