@@ -6,7 +6,7 @@
 /*   By: bfaras <bfaras@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 15:43:12 by bfaras            #+#    #+#             */
-/*   Updated: 2025/01/22 21:09:36 by bfaras           ###   ########.fr       */
+/*   Updated: 2025/01/22 21:34:18 by bfaras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ int main (int argc , char *argv[])
         {
             print_stack(&stack_a);
             clear_stack(&stack_a);
-            write(1,"Error\n",6);
+            ft_printf(":/");
             exit(1);
         }
         push(&stack_a, ft_atoi(argv[i]));
