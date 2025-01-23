@@ -6,7 +6,7 @@
 /*   By: bfaras <bfaras@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 12:02:16 by bfaras            #+#    #+#             */
-/*   Updated: 2025/01/21 12:02:19 by bfaras           ###   ########.fr       */
+/*   Updated: 2025/01/23 20:38:43 by bfaras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		if (node == NULL)
 		{
 			del(content);
-			ft_lstclear(&head, del);
+			ft_lstclear(&head);
 			return (NULL);
 		}
 		ft_lstadd_back(&head, node);

@@ -6,7 +6,7 @@
 /*   By: bfaras <bfaras@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 16:17:30 by bfaras            #+#    #+#             */
-/*   Updated: 2025/01/22 21:05:08 by bfaras           ###   ########.fr       */
+/*   Updated: 2025/01/23 20:22:17 by bfaras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_isdigit(char *str)
 		if ((str[i] >= 48 && str[i] <= 57))
 			i++;
 		else
-			return (0);		
+			return 0;
 	}
 	return (1);
 }
