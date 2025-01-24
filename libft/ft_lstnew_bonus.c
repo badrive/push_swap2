@@ -6,14 +6,13 @@
 /*   By: bfaras <bfaras@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 12:02:34 by bfaras            #+#    #+#             */
-/*   Updated: 2025/01/23 20:22:40 by bfaras           ###   ########.fr       */
+/*   Updated: 2025/01/24 18:19:57 by bfaras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+t_list	*ft_lstnew(int content)
 {
 	t_list	*node;
 

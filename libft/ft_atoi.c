@@ -6,7 +6,7 @@
 /*   By: bfaras <bfaras@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 13:18:59 by bfaras            #+#    #+#             */
-/*   Updated: 2025/01/22 20:56:43 by bfaras           ###   ########.fr       */
+/*   Updated: 2025/01/24 17:59:48 by bfaras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_atoi(const char *str)
 {
 	int		one;
-	long	result;
+	int	result;
 	int		nb;
 	int		j;
 
