@@ -6,7 +6,7 @@
 /*   By: bfaras <bfaras@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 15:43:12 by bfaras            #+#    #+#             */
-/*   Updated: 2025/01/24 18:26:32 by bfaras           ###   ########.fr       */
+/*   Updated: 2025/01/24 21:54:07 by bfaras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,29 @@
 
 void process_digit(char **digit, t_list **stack_a)
 {
-    int     value;
-    int     i;
-    int     j;
+    int value;
+    int i = 0;
+    int j;
 
-    i = 0;
-    j = 0;
-    //(void *)value;
     while (digit[i] != NULL)
     {
-        if (digit[i][0] == '\0')
-            i++;
-        if (!ft_isdigit(digit[i]))
+        j = 0;
+        while (digit[i][j] != '\0')
         {
-            ft_printf("error");
-             exit(1);
+            if (!(digit[i][j] >= '0' && digit[i][j] <= '9') && !(j == 0 && (digit[i][j] == '+' || digit[i][j] == '-')))
+            {
+                ft_printf("Error: Invalid digit '%s'\n", digit[i]);
+                exit(1);
+            }
+            j++;
         }
+
         value = ft_atoi(digit[i]);
         ft_lstadd_back(stack_a, ft_lstnew(value));
         i++;
     }
+
+    // Free the digit array
     i = 0;
     while (digit[i])
     {
@@ -50,6 +53,16 @@ void    print_list(t_list *lst)
         ft_printf("->%d\n", lst->content);
         lst = lst->next;
     }
+}
+
+void    sa(t_list *lst)
+{
+    // if (lst == NULL) // Check if the list is empty
+    // {
+    //     ft_printf("The list is empty.\n");
+    //     return;
+    // }
+    ft_printf("first -> %d\n", lst->content);
 }
 
 int main (int ac, char *av[])
@@ -72,9 +85,15 @@ int main (int ac, char *av[])
                 process_digit(digit, &stack_a);
             i++;
         }
-    }
+    ft_printf("stack_a :\n");
     print_list(stack_a);
-    ft_lstclear(&stack_a);
-    //ft_printf("nice\n"); // Debug print
+    ft_printf("stack_b :\n");
+    print_list(stack_b);
+
+    sa(stack_a); // Print the first node of stack_a
+
+    ft_lstclear(&stack_a); // Clear stack_a
+    ft_lstclear(&stack_b); 
+    }
     return (0);
 }

@@ -1,24 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   sa.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bfaras <bfaras@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/06 16:17:30 by bfaras            #+#    #+#             */
-/*   Updated: 2025/01/24 21:46:04 by bfaras           ###   ########.fr       */
+/*   Created: 2025/01/24 20:53:08 by bfaras            #+#    #+#             */
+/*   Updated: 2025/01/24 21:02:01 by bfaras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../push_swap.h"
 
-int	ft_isdigit(char *str)
+void    sa(t_list *lst)
 {
-	int i = 0;
-	while(str[i] >= '0' && str[i] <= '9')
-	{
-		return 1;
-		i++;
-	}
-	return 0;
+    int     first = lst;
+    ft_printf("%d",first);
 }
