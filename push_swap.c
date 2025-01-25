@@ -6,7 +6,7 @@
 /*   By: bfaras <bfaras@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 15:43:12 by bfaras            #+#    #+#             */
-/*   Updated: 2025/01/24 21:54:07 by bfaras           ###   ########.fr       */
+/*   Updated: 2025/01/25 10:49:34 by bfaras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void process_digit(char **digit, t_list **stack_a)
         j = 0;
         while (digit[i][j] != '\0')
         {
-            if (!(digit[i][j] >= '0' && digit[i][j] <= '9') && !(j == 0 && (digit[i][j] == '+' || digit[i][j] == '-')))
+            if (!(digit[i][j] >= '0' && digit[i][j] <= '9') && !(j == 0 && (digit[i][j] == '-')))
             {
                 ft_printf("Error: Invalid digit '%s'\n", digit[i]);
                 exit(1);
