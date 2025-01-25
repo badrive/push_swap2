@@ -6,7 +6,7 @@
 /*   By: bfaras <bfaras@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 11:38:50 by bfaras            #+#    #+#             */
-/*   Updated: 2024/11/20 17:02:36 by bfaras           ###   ########.fr       */
+/*   Updated: 2025/01/25 16:05:42 by bfaras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ char	**ft_callocc(char **ptr, const char *s, char c)
 	return (ptr);
 }
 
-char	**ft_split(const char *s, char c)
+char	** ft_split(const char *s, char c)
 {
 	char	**ptr;
 	size_t	count;

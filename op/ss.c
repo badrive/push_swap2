@@ -1,27 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sa.c                                               :+:      :+:    :+:   */
+/*   ss.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bfaras <bfaras@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/24 20:53:08 by bfaras            #+#    #+#             */
-/*   Updated: 2025/01/25 14:03:29 by bfaras           ###   ########.fr       */
+/*   Created: 2025/01/25 13:34:44 by bfaras            #+#    #+#             */
+/*   Updated: 2025/01/25 14:16:23 by bfaras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void    sa(t_list *lst, int print)
+void    ss(t_list *a, t_list *b, int print)
 {
-    int swap;
-
-    if (ft_stacklen(lst) > 1)
-    {
-        swap = lst->content;
-        lst->content = lst->next->content;
-        lst->next->content = swap;
-        if (print)
-            ft_printf("sa\n");        
-    }
+    sa(a,0);
+    sb(b,0);
+    if (print)
+        ft_printf("ss\n");
 }

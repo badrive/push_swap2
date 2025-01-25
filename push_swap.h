@@ -6,7 +6,7 @@
 /*   By: bfaras <bfaras@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 20:58:33 by bfaras            #+#    #+#             */
-/*   Updated: 2025/01/24 15:08:53 by bfaras           ###   ########.fr       */
+/*   Updated: 2025/01/25 17:24:21 by bfaras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,12 @@
 #include "libft/libft.h"
 #include "ft_printf/ft_printf.h"
 
- void process_digit(char **digit, t_list **stack_a);
+void    process_digit(char **digit, t_list **stack_a);
+int     ft_stacklen(t_list *stack);
+void    sa(t_list *lst, int print);
+void    sb(t_list *lst, int print);
+void    ss(t_list *a, t_list *b, int print);
+void    pa(t_list **a, t_list **b, int print);
 // t_list	*ft_lstnew(int content);
 // void	ft_lstadd_back(t_list **lst, t_list *new);
 

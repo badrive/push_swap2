@@ -6,7 +6,7 @@
 /*   By: bfaras <bfaras@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 15:43:12 by bfaras            #+#    #+#             */
-/*   Updated: 2025/01/25 11:24:20 by bfaras           ###   ########.fr       */
+/*   Updated: 2025/01/25 17:55:01 by bfaras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,9 +63,17 @@ void    print_list(t_list *lst)
     }
 }
 
-void    sa(t_list *lst)
+int ft_stacklen(t_list *stack)
 {
-    ft_printf("first -> %d\n", lst->content);
+    int len = 0;
+
+    while (stack != NULL)
+    {
+        len++;
+        stack = stack->next;
+    }
+
+    return len;
 }
 
 int main (int ac, char *av[])
@@ -80,7 +88,7 @@ int main (int ac, char *av[])
     i = 1;
     j = 0;
     if (ac > 1)
-    {
+    {                                     
         while (i < ac)
         {
             digit = ft_split(av[i], ' ');
@@ -88,15 +96,18 @@ int main (int ac, char *av[])
                 process_digit(digit, &stack_a);
             i++;
         }
+    }
+
+    ft_lstadd_front(&stack_b, ft_lstnew(4));
+    ft_lstadd_front(&stack_b, ft_lstnew(5));
+
+    pa(&stack_a,&stack_b,1);
     ft_printf("stack_a :\n");
     print_list(stack_a);
     ft_printf("stack_b :\n");
     print_list(stack_b);
 
-    sa(stack_a); // Print the first node of stack_a
-
     ft_lstclear(&stack_a);
-    ft_lstclear(&stack_b); 
-    }
+    ft_lstclear(&stack_b);
     return (0);
 }
