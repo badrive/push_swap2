@@ -6,7 +6,7 @@
 /*   By: bfaras <bfaras@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 15:43:12 by bfaras            #+#    #+#             */
-/*   Updated: 2025/01/25 10:49:34 by bfaras           ###   ########.fr       */
+/*   Updated: 2025/01/25 11:24:20 by bfaras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,27 @@ void process_digit(char **digit, t_list **stack_a)
 {
     int value;
     int i = 0;
-    int j;
 
     while (digit[i] != NULL)
     {
-        j = 0;
-        while (digit[i][j] != '\0')
+        // Validate the string using ft_isdigit
+        if (!ft_isdigit(digit[i]))
         {
-            if (!(digit[i][j] >= '0' && digit[i][j] <= '9') && !(j == 0 && (digit[i][j] == '-')))
+            ft_printf("Error: Invalid digit '%s'\n", digit[i]);
+
+            // Free the digit array
+            int j = 0;
+            while (digit[j])
             {
-                ft_printf("Error: Invalid digit '%s'\n", digit[i]);
-                exit(1);
+                free(digit[j]);
+                j++;
             }
-            j++;
+            free(digit);
+
+            // Free the stack_a linked list
+            ft_lstclear(stack_a);
+
+            exit(1);
         }
 
         value = ft_atoi(digit[i]);
@@ -57,11 +65,6 @@ void    print_list(t_list *lst)
 
 void    sa(t_list *lst)
 {
-    // if (lst == NULL) // Check if the list is empty
-    // {
-    //     ft_printf("The list is empty.\n");
-    //     return;
-    // }
     ft_printf("first -> %d\n", lst->content);
 }
 
@@ -92,7 +95,7 @@ int main (int ac, char *av[])
 
     sa(stack_a); // Print the first node of stack_a
 
-    ft_lstclear(&stack_a); // Clear stack_a
+    ft_lstclear(&stack_a);
     ft_lstclear(&stack_b); 
     }
     return (0);
