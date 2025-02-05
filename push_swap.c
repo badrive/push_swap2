@@ -6,7 +6,7 @@
 /*   By: bfaras <bfaras@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 15:43:12 by bfaras            #+#    #+#             */
-/*   Updated: 2025/01/25 18:50:41 by bfaras           ###   ########.fr       */
+/*   Updated: 2025/02/05 19:44:55 by bfaras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,8 @@ int ft_stacklen(t_list *stack)
     return len;
 }
 
+
+
 int main (int ac, char *av[])
 {
     t_list  *stack_a;
@@ -100,8 +102,9 @@ int main (int ac, char *av[])
 
     ft_lstadd_front(&stack_b, ft_lstnew(4));
     ft_lstadd_front(&stack_b, ft_lstnew(5));
-
-    pb(&stack_a,&stack_b,1);
+    
+    //pb(&stack_a,&stack_b,1);
+    ra(stack_a,1);
     ft_printf("stack_a :\n");
     print_list(stack_a);
     ft_printf("stack_b :\n");

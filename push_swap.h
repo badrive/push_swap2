@@ -6,7 +6,7 @@
 /*   By: bfaras <bfaras@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 20:58:33 by bfaras            #+#    #+#             */
-/*   Updated: 2025/01/25 18:45:10 by bfaras           ###   ########.fr       */
+/*   Updated: 2025/02/05 19:44:31 by bfaras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ void    sb(t_list *lst, int print);
 void    ss(t_list *a, t_list *b, int print);
 void    pa(t_list **a, t_list **b, int print);
 void    pb(t_list **a, t_list **b, int print);
+void    ra(t_list *a, int print);
 // t_list	*ft_lstnew(int content);
 // void	ft_lstadd_back(t_list **lst, t_list *new);
 

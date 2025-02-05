@@ -6,7 +6,7 @@
 /*   By: bfaras <bfaras@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 17:11:09 by bfaras            #+#    #+#             */
-/*   Updated: 2025/01/24 18:53:56 by bfaras           ###   ########.fr       */
+/*   Updated: 2025/01/25 20:50:53 by bfaras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ typedef struct s_list
 {
 	int			content;
 	struct s_list	*next;
+	struct s_list	*prev;
 }					t_list;
 
 t_list	*ft_lstnew(int content);
