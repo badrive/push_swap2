@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sa.c                                               :+:      :+:    :+:   */
+/*   op3.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bfaras <bfaras@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/24 20:53:08 by bfaras            #+#    #+#             */
-/*   Updated: 2025/02/06 14:24:18 by bfaras           ###   ########.fr       */
+/*   Created: 2025/02/08 12:03:41 by bfaras            #+#    #+#             */
+/*   Updated: 2025/02/08 16:03:46 by bfaras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../../push_swap.h"
 
-void    sa(t_list *lst, int print)
+void    ss(t_list *a, t_list *b, int print)
 {
-    int swap;
-    
-    swap = lst->content;
-    lst->content = lst->next->content;
-    lst->next->content = swap;
+    sa(a,0);
+    sb(b,0);
     if (print)
-        ft_printf("sa\n");        
+        ft_printf("ss\n");
 }
-// yassin

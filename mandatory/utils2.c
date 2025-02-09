@@ -1,38 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rra.c                                              :+:      :+:    :+:   */
+/*   utils2.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bfaras <bfaras@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/05 20:56:32 by bfaras            #+#    #+#             */
-/*   Updated: 2025/02/07 09:37:44 by bfaras           ###   ########.fr       */
+/*   Created: 2025/02/09 15:08:40 by bfaras            #+#    #+#             */
+/*   Updated: 2025/02/09 20:12:26 by bfaras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void rra(t_list **a, int print)
+int    stack_max(t_list **lst)
 {
-    t_list  *last;
-    t_list  *second_to_last;
-
-    if (ft_stacklen(*a) >= 2)
+    t_list *current;
+    int max;
+        
+    current = *lst;
+    max = current->content;
+    
+    while (current)
     {
-        last = *a;
-
-        second_to_last = NULL;
-
-        while (last->next)
-        {
-            second_to_last = last;
-            last = last->next;
-        }
-        second_to_last->next = NULL;
-        last->next = *a;
-        *a = last;
-        if (print)
-            ft_printf("rra\n");
+        if (current->content > max)
+            max = current->content;
+        current = current->next;
     }
+    return (max);
 }
-//zone 13370lions alx
