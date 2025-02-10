@@ -6,7 +6,7 @@
 /*   By: bfaras <bfaras@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 15:43:12 by bfaras            #+#    #+#             */
-/*   Updated: 2025/02/09 18:32:50 by bfaras           ###   ########.fr       */
+/*   Updated: 2025/02/10 18:42:11 by bfaras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ int main (int ac, char *av[])
 
         // ft_lstadd_front(&stack_b, ft_lstnew(4));
         // ft_lstadd_front(&stack_b, ft_lstnew(5));
-
-        sort4(&stack_a,&stack_b);
+        // sort3(&stack_a);
+        sort5(&stack_a,&stack_b);
         ft_printf("stack_a :\n");
         print_list(stack_a);
         ft_printf("stack_b :\n");

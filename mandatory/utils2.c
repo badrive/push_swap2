@@ -6,7 +6,7 @@
 /*   By: bfaras <bfaras@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/09 15:08:40 by bfaras            #+#    #+#             */
-/*   Updated: 2025/02/09 20:12:26 by bfaras           ###   ########.fr       */
+/*   Updated: 2025/02/10 17:48:43 by bfaras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,21 @@ int    stack_max(t_list **lst)
         current = current->next;
     }
     return (max);
+}
+
+int    stack_min(t_list **lst)
+{
+    t_list *current;
+    int min;
+        
+    current = *lst;
+    min = current->content;
+    
+    while (current)
+    {
+        if (current->content < min)
+            min = current->content;
+        current = current->next;
+    }
+    return (min);
 }

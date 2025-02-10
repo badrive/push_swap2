@@ -1,7 +1,7 @@
 NAME = pushswap.a
 
 SRCS = mandatory/utils.c mandatory/utils2.c mandatory/op/op1.c mandatory/op/op2.c mandatory/op/op3.c \
-		mandatory/sort.c \
+		mandatory/s_sort.c \
 
 OBJS = $(SRCS:.c=.o)
 
