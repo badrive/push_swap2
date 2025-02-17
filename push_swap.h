@@ -6,7 +6,7 @@
 /*   By: bfaras <bfaras@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 20:58:33 by bfaras            #+#    #+#             */
-/*   Updated: 2025/02/14 14:37:05 by bfaras           ###   ########.fr       */
+/*   Updated: 2025/02/17 18:50:08 by bfaras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,7 @@ void    print_list(t_list *lst);
 int     ft_stacklen(t_list *stack);
 int     stack_max(t_list **lst);
 int     stack_min(t_list **lst);
-void    sort_arr(int    *arr);
-void    pars_arr(t_list *a, int    *arr);
+void    stack_index(t_list **a);
 
 void    sa(t_list *lst, int print);
 void    sb(t_list *lst, int print);

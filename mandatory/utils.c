@@ -6,7 +6,7 @@
 /*   By: bfaras <bfaras@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 11:42:00 by bfaras            #+#    #+#             */
-/*   Updated: 2025/02/08 14:11:04 by bfaras           ###   ########.fr       */
+/*   Updated: 2025/02/17 19:53:01 by bfaras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,9 +55,11 @@ void    print_list(t_list *lst)
 {
     while (lst)
     {
-        ft_printf("->%d\n", lst->content);
+        ft_printf("->%d[%d]\n", lst->content, lst->index);
         lst = lst->next;
     }
+
+    
 }
 
 int ft_stacklen(t_list *stack)
