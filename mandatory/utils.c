@@ -6,7 +6,7 @@
 /*   By: bfaras <bfaras@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 11:42:00 by bfaras            #+#    #+#             */
-/*   Updated: 2025/02/17 19:53:01 by bfaras           ###   ########.fr       */
+/*   Updated: 2025/02/20 21:02:23 by bfaras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,4 +73,18 @@ int ft_stacklen(t_list *stack)
     }
 
     return len;
+}
+
+void     process_arguments(int ac, char **av, t_list **stack_a)
+{
+    char **digit;
+    int i = 1;
+
+    while (i < ac)
+    {
+        digit = ft_split(av[i], ' ');
+        if (digit)
+            process_digit(digit, stack_a);
+        i++;
+    }
 }
