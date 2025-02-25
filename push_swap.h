@@ -6,20 +6,17 @@
 /*   By: bfaras <bfaras@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 20:58:33 by bfaras            #+#    #+#             */
-/*   Updated: 2025/02/24 19:48:02 by bfaras           ###   ########.fr       */
+/*   Updated: 2025/02/25 15:06:37 by bfaras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include "ft_printf/ft_printf.h"
 # include "libft/libft.h"
-# include <stdio.h>
 
 void	ft_free(char **digit);
 void	process_digit(char **digit, t_list **stack_a);
-void	print_list(t_list *lst);
 int		ft_stacklen(t_list *stack);
 int		stack_max(t_list **lst);
 int		stack_min(t_list **lst);
