@@ -12,10 +12,10 @@
 
 #include "../../push_swap.h"
 
-void    ss(t_list *a, t_list *b, int print)
+void	ss(t_list *a, t_list *b, int print)
 {
-    sa(a,0);
-    sb(b,0);
-    if (print)
-        ft_printf("ss\n");
+	sa(a, 0);
+	sb(b, 0);
+	if (print)
+		ft_printf("ss\n");
 }

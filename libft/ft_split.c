@@ -34,9 +34,9 @@ int	count_word(const char *s, char c)
 int	ft_len(const char *s, char c)
 {
 	int	i;
-	if (!s)
-        return (0);
 
+	if (!s)
+		return (0);
 	i = 0;
 	while (s[i] && s[i] != c)
 		i++;
@@ -79,7 +79,7 @@ char	**ft_callocc(char **ptr, const char *s, char c)
 	return (ptr);
 }
 
-char	** ft_split(const char *s, char c)
+char	**ft_split(const char *s, char c)
 {
 	char	**ptr;
 	size_t	count;

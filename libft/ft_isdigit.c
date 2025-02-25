@@ -14,20 +14,18 @@
 
 int	ft_isdigit(char *str)
 {
-    int i = 0;
+	int	i;
 
-    if (str[i] == '-')
-        i++;
-
-    while (str[i] != '\0')
-    {
-        if (str[i] < '0' || str[i] > '9')
-            return 0;
-        i++;
-    }
-
-    if (i == 0 || (i == 1 && str[0] == '-'))
-        return 0;
-
-    return 1;
+	i = 0;
+	if (str[i] == '-')
+		i++;
+	while (str[i] != '\0')
+	{
+		if (str[i] < '0' || str[i] > '9')
+			return (0);
+		i++;
+	}
+	if (i == 0 || (i == 1 && str[0] == '-'))
+		return (0);
+	return (1);
 }
