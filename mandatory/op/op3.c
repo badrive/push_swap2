@@ -17,5 +17,5 @@ void	ss(t_list *a, t_list *b, int print)
 	sa(a, 0);
 	sb(b, 0);
 	if (print)
-		write(1,"ss\n",3);
+		write(1, "ss\n", 3);
 }

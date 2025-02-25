@@ -30,7 +30,7 @@ void	rra(t_list **a, int print)
 		last->next = *a;
 		*a = last;
 		if (print)
-			write(1,"rra\n",4);
+			write(1, "rra\n", 4);
 	}
 }
 
@@ -52,7 +52,7 @@ void	rrb(t_list **b, int print)
 		last->next = *b;
 		*b = last;
 		if (print)
-			write(1,"rrb\n",4);
+			write(1, "rrb\n", 4);
 	}
 }
 
@@ -61,7 +61,7 @@ void	rrr(t_list **a, t_list **b, int print)
 	rra(a, 0);
 	rrb(b, 0);
 	if (print)
-		write(1,"rrr\n",4);
+		write(1, "rrr\n", 4);
 }
 
 void	sa(t_list *lst, int print)
@@ -72,7 +72,7 @@ void	sa(t_list *lst, int print)
 	lst->content = lst->next->content;
 	lst->next->content = swap;
 	if (print)
-		write(1,"sa\n",3);
+		write(1, "sa\n", 3);
 }
 
 void	sb(t_list *lst, int print)
@@ -85,6 +85,6 @@ void	sb(t_list *lst, int print)
 		lst->content = lst->next->content;
 		lst->next->content = swap;
 		if (print)
-			write(1,"sb\n",3);
+			write(1, "sb\n", 3);
 	}
 }

@@ -86,7 +86,7 @@ int	has_duplicates(t_list *stack)
 
 void	error_exit(t_list **stack_a)
 {
-	write(2,"Error\n",6);
+	write(2, "Error\n", 6);
 	ft_lstclear(stack_a);
 	exit(1);
 }

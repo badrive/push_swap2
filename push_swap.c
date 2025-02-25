@@ -6,7 +6,7 @@
 /*   By: bfaras <bfaras@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 15:43:12 by bfaras            #+#    #+#             */
-/*   Updated: 2025/02/21 09:09:31 by bfaras           ###   ########.fr       */
+/*   Updated: 2025/02/25 20:49:30 by bfaras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,11 @@ int	main(int ac, char *av[])
 
 	stack_a = NULL;
 	stack_b = NULL;
-	if (ac > 1)
+	if (ac == 1)
+		return (0);
+	process_arguments(ac, av, &stack_a);
+	if (!is_sorted(stack_a))
 	{
-		process_arguments(ac, av, &stack_a);
 		stack_index(&stack_a);
 		if (ft_stacklen(stack_a) <= 3)
 			sort3(&stack_a);
