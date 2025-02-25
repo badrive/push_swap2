@@ -6,7 +6,7 @@
 /*   By: bfaras <bfaras@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 11:42:00 by bfaras            #+#    #+#             */
-/*   Updated: 2025/02/25 18:07:19 by bfaras           ###   ########.fr       */
+/*   Updated: 2025/02/25 18:28:04 by bfaras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	process_arguments(int ac, char **av, t_list **stack_a)
 	i = 1;
 	while (i < ac)
 	{
-		if (!av[i] || av[i][0] == '\0')
+		if (!av[i] || av[i][0] == '\0' || is_only_spaces(av[i]))
 			error_exit(stack_a);
 		digit = ft_split(av[i], ' ');
 		if (digit)

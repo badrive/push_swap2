@@ -6,7 +6,7 @@
 /*   By: bfaras <bfaras@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/09 15:08:40 by bfaras            #+#    #+#             */
-/*   Updated: 2025/02/25 18:06:52 by bfaras           ###   ########.fr       */
+/*   Updated: 2025/02/25 18:11:58 by bfaras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ int	has_duplicates(t_list *stack)
 
 void	error_exit(t_list **stack_a)
 {
-	write(1,"Error\n",6);
+	write(2,"Error\n",6);
 	ft_lstclear(stack_a);
 	exit(1);
 }
