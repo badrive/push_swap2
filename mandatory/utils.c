@@ -6,7 +6,7 @@
 /*   By: bfaras <bfaras@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 11:42:00 by bfaras            #+#    #+#             */
-/*   Updated: 2025/02/25 18:28:04 by bfaras           ###   ########.fr       */
+/*   Updated: 2025/02/25 20:55:08 by bfaras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ void	ft_free(char **digit)
 	}
 	free(digit);
 }
-
 void	process_arguments(int ac, char **av, t_list **stack_a)
 {
 	char	**digit;
@@ -66,7 +65,7 @@ static int	is_valid_number(char *str)
 	return (str[i] == '\0' && i > 0);
 }
 
-void	process_digit(char **digit, t_list **stack_a)
+static void	process_digit(char **digit, t_list **stack_a)
 {
 	int	value;
 	int	i;
