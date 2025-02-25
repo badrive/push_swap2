@@ -6,7 +6,7 @@
 /*   By: bfaras <bfaras@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 20:58:33 by bfaras            #+#    #+#             */
-/*   Updated: 2025/02/25 15:06:37 by bfaras           ###   ########.fr       */
+/*   Updated: 2025/02/25 18:07:30 by bfaras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int		stack_min(t_list **lst);
 void	stack_index(t_list **a);
 void	process_arguments(int ac, char **av, t_list **stack_a);
 int		has_duplicates(t_list *stack);
-void	error_exit(char *message, t_list **stack_a);
+void	error_exit(t_list **stack_a);
 
 void	sa(t_list *lst, int print);
 void	sb(t_list *lst, int print);

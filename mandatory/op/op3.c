@@ -6,7 +6,7 @@
 /*   By: bfaras <bfaras@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 12:03:41 by bfaras            #+#    #+#             */
-/*   Updated: 2025/02/25 15:09:09 by bfaras           ###   ########.fr       */
+/*   Updated: 2025/02/25 18:10:22 by bfaras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,5 @@ void	ss(t_list *a, t_list *b, int print)
 	sa(a, 0);
 	sb(b, 0);
 	if (print)
-		ft_printf("ss\n");
+		write(1,"ss\n",3);
 }

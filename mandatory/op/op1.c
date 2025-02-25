@@ -6,7 +6,7 @@
 /*   By: bfaras <bfaras@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 11:59:37 by bfaras            #+#    #+#             */
-/*   Updated: 2025/02/25 15:08:45 by bfaras           ###   ########.fr       */
+/*   Updated: 2025/02/25 18:08:56 by bfaras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	pa(t_list **a, t_list **b, int print)
 		*b = (*b)->next;
 		free(temp);
 		if (print)
-			ft_printf("pa\n");
+			write(1,"pa\n",3);
 	}
 }
 
@@ -46,7 +46,7 @@ void	pb(t_list **a, t_list **b, int print)
 		*a = (*a)->next;
 		free(temp);
 		if (print)
-			ft_printf("pb\n");
+			write(1,"pb\n",3);
 	}
 }
 
@@ -65,7 +65,7 @@ void	ra(t_list **a, int print)
 		first->next = NULL;
 		last->next = first;
 		if (print)
-			ft_printf("ra\n");
+			write(1,"ra\n",3);
 	}
 }
 
@@ -84,7 +84,7 @@ void	rb(t_list **b, int print)
 		first->next = NULL;
 		last->next = first;
 		if (print)
-			ft_printf("rb\n");
+			write(1,"rb\n",3);
 	}
 }
 
@@ -93,5 +93,5 @@ void	rr(t_list **a, t_list **b, int print)
 	ra(a, 0);
 	rb(b, 0);
 	if (print)
-		ft_printf("rr\n");
+		write(1,"rr\n",3);
 }
