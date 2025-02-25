@@ -6,7 +6,7 @@
 /*   By: bfaras <bfaras@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/09 15:08:40 by bfaras            #+#    #+#             */
-/*   Updated: 2025/02/21 09:22:31 by bfaras           ###   ########.fr       */
+/*   Updated: 2025/02/24 19:47:47 by bfaras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,4 +64,31 @@ void stack_index(t_list **a)
         }
         current = current->next;
     }
+}
+
+int has_duplicates(t_list *stack)
+{
+    t_list *current;
+    t_list *check;
+    
+    current = stack;
+    while (current)
+    {
+        check = current->next;
+        while (check)
+        {
+            if (current->content == check->content)
+                return (1); // Duplicate found
+            check = check->next;
+        }
+        current = current->next;
+    }
+    return (0); // No duplicates
+}
+
+void error_exit(char *message, t_list **stack_a)
+{
+    ft_printf("Error: %s\n", message);
+    ft_lstclear(stack_a);
+    exit(1);
 }

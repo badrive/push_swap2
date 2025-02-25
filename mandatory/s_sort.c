@@ -6,7 +6,7 @@
 /*   By: bfaras <bfaras@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 16:04:32 by bfaras            #+#    #+#             */
-/*   Updated: 2025/02/20 20:15:39 by bfaras           ###   ########.fr       */
+/*   Updated: 2025/02/24 17:55:15 by bfaras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,9 @@ void    sort3(t_list **lst)
         if ((*lst)->next->content == max)
             rra(lst,1);
     }
-    if ((*lst)->content > (*lst)->next->content)
-        sa(*lst,1);
+    // Check that (*lst) and (*lst)->next both exist
+    if ((*lst) && (*lst)->next && (*lst)->content > (*lst)->next->content)
+        sa(*lst, 1);
 }
 
 void    sort5(t_list **a, t_list **b)

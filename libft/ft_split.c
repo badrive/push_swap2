@@ -6,7 +6,7 @@
 /*   By: bfaras <bfaras@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 11:38:50 by bfaras            #+#    #+#             */
-/*   Updated: 2025/01/25 16:05:42 by bfaras           ###   ########.fr       */
+/*   Updated: 2025/02/24 17:26:53 by bfaras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ int	count_word(const char *s, char c)
 int	ft_len(const char *s, char c)
 {
 	int	i;
+	if (!s)
+        return (0);
 
 	i = 0;
 	while (s[i] && s[i] != c)
@@ -94,6 +96,9 @@ char	** ft_split(const char *s, char c)
 		return (ptr);
 	}
 	if (!ft_callocc(ptr, s, c))
+	{
+		free(ptr);
 		return (NULL);
+	}
 	return (ptr);
 }
