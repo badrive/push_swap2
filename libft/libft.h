@@ -6,7 +6,7 @@
 /*   By: bfaras <bfaras@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 17:11:09 by bfaras            #+#    #+#             */
-/*   Updated: 2025/02/25 18:06:20 by bfaras           ###   ########.fr       */
+/*   Updated: 2025/02/26 18:08:59 by bfaras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@
 void				ft_bzero(void *s, size_t n);
 void				*ft_calloc(size_t count, size_t size);
 int					ft_isdigit(char *str);
-int					ft_atoi(const char *str);
 size_t				ft_strlen(const char *s);
 size_t				ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t				ft_strlcat(char *dst, const char *src, size_t dstsize);
@@ -42,6 +41,7 @@ typedef struct s_list
 	int				index;
 }					t_list;
 
+int					ft_atoi(const char *str, t_list **stack_a, char **digit);
 t_list				*ft_lstnew(int content);
 void				ft_lstadd_front(t_list **lst, t_list *new);
 t_list				*ft_lstlast(t_list *lst);
