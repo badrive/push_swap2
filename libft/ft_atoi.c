@@ -32,11 +32,12 @@ int	ft_atoi(const char *str, t_list **stack_a, char **digit)
 	{
 		nb = (str[j++] - 48);
 		result = result * 10 + nb;
-	}
+	
 	if ((result * one) > INT_MAX || (result * one) < INT_MIN)
 	{
 		ft_free(digit);
 		error_exit(stack_a);
+	}
 	}
 	return (result * one);
 }
